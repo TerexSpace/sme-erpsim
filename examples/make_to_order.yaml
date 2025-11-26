@@ -1,0 +1,37 @@
+process:
+  name: make_to_order
+  start_activity: receive_order
+  activities:
+    - name: receive_order
+      mean_duration: 0.5
+      resource: planners
+    - name: assemble
+      mean_duration: 2.0
+      resource: assembly
+    - name: qa
+      mean_duration: 0.5
+      resource: qa
+    - name: ship
+      mean_duration: 0.7
+      resource: warehouse
+  transitions:
+    - [receive_order, assemble]
+    - [assemble, qa]
+    - [qa, ship]
+resources:
+  - name: planners
+    capacity: 1
+    kind: worker
+  - name: assembly
+    capacity: 2
+    kind: worker
+  - name: qa
+    capacity: 1
+    kind: worker
+  - name: warehouse
+    capacity: 1
+    kind: worker
+demand:
+  process: poisson
+  rate_per_hour: 2
+duration_hours: 8

@@ -1,0 +1,27 @@
+process:
+  name: make_to_stock
+  start_activity: receive_order
+  activities:
+    - name: receive_order
+      mean_duration: 0.5
+      resource: planners
+    - name: pick_pack
+      mean_duration: 1.0
+      resource: warehouse
+    - name: ship
+      mean_duration: 0.7
+      resource: warehouse
+  transitions:
+    - [receive_order, pick_pack]
+    - [pick_pack, ship]
+resources:
+  - name: planners
+    capacity: 1
+    kind: worker
+  - name: warehouse
+    capacity: 2
+    kind: worker
+demand:
+  process: poisson
+  rate_per_hour: 3
+duration_hours: 8

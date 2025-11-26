@@ -1,0 +1,21 @@
+@book{law,
+  title={Simulation Modeling and Analysis},
+  author={Law, Averill M},
+  year={2015},
+  publisher={McGraw-Hill}
+}
+
+@book{banks,
+  title={Discrete-Event System Simulation},
+  author={Banks, Jerry and Carson, John and Nelson, Barry and Nicol, David},
+  year={2010},
+  publisher={Pearson}
+}
+
+@article{shannon,
+  title={Systems Simulation: The Art and Science},
+  author={Shannon, Robert E},
+  journal={Proceedings of the Winter Simulation Conference},
+  year={1975},
+  pages={7--14}
+}

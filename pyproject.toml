@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sme-erpsim"
+version = "0.1.0"
+description = "SME-ERPSim: A discrete-event simulation engine for SME ERP processes"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [{ name = "Your Name", email = "you@example.com" }]
+dependencies = [
+    "pydantic>=2.6",
+    "pyyaml>=6.0",
+    "simpy>=4.0.1",
+    "pandas>=2.1",
+    "numpy>=1.26",
+    "matplotlib>=3.8",
+    "networkx>=3.2",
+]
+
+[project.urls]
+homepage = "https://example.com/sme-erpsim"
+repository = "https://example.com/sme-erpsim"
+
+[project.scripts]
+"sme-erpsim" = "sme_erpsim.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-q"
+testpaths = ["tests"]
