@@ -1,0 +1,31 @@
+name: paper
+
+on:
+  push:
+    paths:
+      - paper/**
+      - .github/workflows/paper.yml
+  pull_request:
+    paths:
+      - paper/**
+      - .github/workflows/paper.yml
+
+jobs:
+  paper:
+    runs-on: ubuntu-latest
+    name: Paper PDF
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build paper PDF
+        uses: openjournals/openjournals-pdf-action@main
+        with:
+          journal: joss
+          paper-path: paper/paper.md
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper
+          path: paper.pdf

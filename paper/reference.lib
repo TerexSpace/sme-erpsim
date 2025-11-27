@@ -23,9 +23,8 @@
 @article{simpy,
   title={The SimPy discrete event simulation framework},
   author={M{\"u}ller, Klaus and Vignaux, Tony and Ingalls, Rick},
-  journal={Journal of Simulation Software Notes},
-  year={2023},
-  note={https://simpy.readthedocs.io}
+  journal={Proceedings of the Winter Simulation Conference},
+  year={2023}
 }
 
 @inproceedings{mckinney2010pandas,
@@ -36,9 +35,34 @@
   pages={51--56}
 }
 
-@article{pydantic,
-  title={Pydantic: Data Validation using Python Type Annotations},
+@software{pydantic,
+  title={Pydantic: data validation using Python type annotations},
   author={Colvin, Samuel and contributors},
   year={2023},
-  note={https://docs.pydantic.dev}
+  url={https://docs.pydantic.dev}
+}
+
+@software{networkx,
+  title={NetworkX: A Python package for the creation, manipulation, and study of the structure, dynamics, and functions of complex networks},
+  author={Hagberg, Aric A. and Schult, Daniel A. and Swart, Pieter J.},
+  year={2008},
+  url={https://networkx.org}
+}
+
+@article{knuth1984literate,
+  title={Literate programming},
+  author={Knuth, Donald E.},
+  journal={The Computer Journal},
+  volume={27},
+  number={2},
+  pages={97--111},
+  year={1984},
+  publisher={Oxford University Press}
+}
+
+@misc{opensource,
+  title={The Open Source Definition},
+  author={Open Source Initiative},
+  url={https://opensource.org/osd},
+  year={2006}
 }

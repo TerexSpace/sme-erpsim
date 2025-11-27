@@ -3,17 +3,18 @@ message: "If you use SME-ERPSim, please cite it as below."
 title: "SME-ERPSim: A discrete-event simulation engine for SME ERP processes"
 version: "0.1.0"
 authors:
-  - family-names: "Name"
-    given-names: "Your"
-    affiliation: "Your Institution"
-    email: "you@example.com"
-repository-code: "https://example.com/sme-erpsim"
+  - family-names: "Ospanov"
+    given-names: "Almas"
+    affiliation: "Astana IT University"
+    email: "a.ospanov@astanait.edu.kz"
+    orcid: "https://orcid.org/0009-0004-3834-130X"
+repository-code: "https://github.com/TerexSpace/sme-erpsim"
 license: "MIT"
 preferred-citation:
   type: article
   title: "SME-ERPSim: A discrete-event simulation engine for SME ERP processes"
   authors:
-    - family-names: "Name"
-      given-names: "Your"
+    - family-names: "Ospanov"
+      given-names: "Almas"
   year: 2024
   journal: "Journal of Open Source Software"
