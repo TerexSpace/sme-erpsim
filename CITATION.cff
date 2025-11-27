@@ -1,7 +1,7 @@
-cff-version: 1.2.0
+cff-version: 1.0.0
 message: "If you use SME-ERPSim, please cite it as below."
 title: "SME-ERPSim: A discrete-event simulation engine for SME ERP processes"
-version: "0.1.0"
+version: "1.0.0"
 authors:
   - family-names: "Ospanov"
     given-names: "Almas"
@@ -16,5 +16,5 @@ preferred-citation:
   authors:
     - family-names: "Ospanov"
       given-names: "Almas"
-  year: 2024
+  year: 2025
   journal: "Journal of Open Source Software"
