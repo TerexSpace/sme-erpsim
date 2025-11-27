@@ -16,7 +16,7 @@ affiliations:
 date: 2025-11-27
 bibliography: reference.lib
 repository: https://github.com/TerexSpace/sme-erpsim
-DOI: https://doi.org/10.5281/zenodo.17738569
+DOI: https://doi.org/10.5281/zenodo.17738570
 ---
 
 # Summary
