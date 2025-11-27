@@ -9,7 +9,7 @@ description = "SME-ERPSim: A discrete-event simulation engine for SME ERP proces
 readme = "README.md"
 requires-python = ">=3.11"
 license = { file = "LICENSE" }
-authors = [{ name = "Your Name", email = "you@example.com" }]
+authors = [{ name = "Almas Ospanov", email = "a.ospanov@astanait.edu.kz" }]
 dependencies = [
     "pydantic>=2.6",
     "pyyaml>=6.0",
@@ -18,11 +18,15 @@ dependencies = [
     "numpy>=1.26",
     "matplotlib>=3.8",
     "networkx>=3.2",
+    "tabulate>=0.9",
 ]
 
 [project.urls]
-homepage = "https://example.com/sme-erpsim"
-repository = "https://example.com/sme-erpsim"
+homepage = "https://github.com/TerexSpace/sme-erpsim"
+repository = "https://github.com/TerexSpace/sme-erpsim"
+
+[project.optional-dependencies]
+test = ["pytest"]
 
 [project.scripts]
 "sme-erpsim" = "sme_erpsim.cli:main"

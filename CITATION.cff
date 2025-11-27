@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use SME-ERPSim, please cite it as below."
+title: "SME-ERPSim: A discrete-event simulation engine for SME ERP processes"
+version: "0.1.0"
+authors:
+  - family-names: "Name"
+    given-names: "Your"
+    affiliation: "Your Institution"
+    email: "you@example.com"
+repository-code: "https://example.com/sme-erpsim"
+license: "MIT"
+preferred-citation:
+  type: article
+  title: "SME-ERPSim: A discrete-event simulation engine for SME ERP processes"
+  authors:
+    - family-names: "Name"
+      given-names: "Your"
+  year: 2024
+  journal: "Journal of Open Source Software"

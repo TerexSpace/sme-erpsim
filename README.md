@@ -1,5 +1,7 @@
 # SME-ERPSim: A discrete-event simulation engine for SME ERP processes
 
+[![CI](https://github.com/TerexSpace/sme-erpsim/actions/workflows/ci.yml/badge.svg)](https://github.com/TerexSpace/sme-erpsim/actions/workflows/ci.yml)
+
 SME-ERPSim is a research-grade Python package for simulating order-to-cash, procure-to-pay, and light make-to-stock / assemble-to-order flows. It targets small and medium enterprises (SMEs) that need fast what-if analysis without heavyweight ERP modules.
 
 ## Statement of need
@@ -17,6 +19,7 @@ SMEs often lack the resources to run commercial simulation suites or complex ERP
 ```bash
 pip install .
 ```
+Optional: ensure `tabulate` is available for Markdown KPI output (installed by default via `pyproject.toml`).
 
 ## Quick start
 ```python
@@ -64,6 +67,11 @@ sme-erpsim run-config examples/make_to_stock.yaml
 ```bash
 pytest
 ```
+
+Continuous integration: a GitHub Actions workflow (`.github/workflows/ci.yml`) runs the test suite on pushes and pull requests.
+
+## Citation
+If you use SME-ERPSim in academic work, please cite the accompanying JOSS paper (see `paper/paper.md`) and the project’s `CITATION.cff`.
 
 ## License
 MIT License (see `LICENSE`).

@@ -9,6 +9,7 @@ build/
 dist/
 .eggs/
 .ipynb_checkpoints/
+.pytest_cache/
 .env
 .venv
 *.log

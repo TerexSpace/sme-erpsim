@@ -32,7 +32,25 @@ class SimulationResult:
 
 
 class SimulationEngine:
-    """High-level API that wraps SimPy to execute a process model."""
+    """
+    High-level API that wraps SimPy to execute a process model.
+
+    This engine orchestrates the simulation by:
+    1. Initializing the SimPy environment.
+    2. Binding abstract resources (WorkerPool, WorkCenter) to SimPy resources.
+    3. Generating order arrivals based on the configured process.
+    4. Routing orders through the process graph (ProcessModel).
+    5. Collecting events and metrics via monitors.
+
+    Attributes:
+        process_model (ProcessModel): The graph defining activities and transitions.
+        arrival_process (OrderArrivalProcess): The generator for order interarrival times.
+        resources (Dict[str, object]): Map of resource names to resource objects (WorkerPool, etc.).
+        monitors (List[EventMonitor]): List of monitors to receive simulation events.
+        random_seed (Optional[int]): Seed for the random number generator to ensure reproducibility.
+        env (simpy.Environment): The underlying SimPy environment.
+        rng (np.random.Generator): The random number generator instance.
+    """
 
     def __init__(
         self,
@@ -53,6 +71,16 @@ class SimulationEngine:
 
     @classmethod
     def from_config(cls, config: SimulationConfig) -> "SimulationEngine":
+        """
+        Factory method to create a SimulationEngine from a configuration object.
+
+        Args:
+            config (SimulationConfig): The validated configuration object containing
+                process definitions, resource specs, and demand parameters.
+
+        Returns:
+            SimulationEngine: A fully initialized engine ready to run.
+        """
         pm = ProcessModel(config.process.name)
         res_map: Dict[str, object] = {}
         for act in config.process.activities:
@@ -80,6 +108,15 @@ class SimulationEngine:
         return bound
 
     def run(self, until: float) -> SimulationResult:
+        """
+        Execute the simulation until the specified simulation time.
+
+        Args:
+            until (float): The simulation time limit (e.g., hours).
+
+        Returns:
+            SimulationResult: A container holding all collected events and monitors.
+        """
         bound_resources = self._bind_resources()
         self.env.process(self._arrival_generator(bound_resources))
         self.env.run(until=until)

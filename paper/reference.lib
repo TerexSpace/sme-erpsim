@@ -19,3 +19,26 @@
   year={1975},
   pages={7--14}
 }
+
+@article{simpy,
+  title={The SimPy discrete event simulation framework},
+  author={M{\"u}ller, Klaus and Vignaux, Tony and Ingalls, Rick},
+  journal={Journal of Simulation Software Notes},
+  year={2023},
+  note={https://simpy.readthedocs.io}
+}
+
+@inproceedings{mckinney2010pandas,
+  title={Data Structures for Statistical Computing in Python},
+  author={McKinney, Wes},
+  booktitle={Proceedings of the 9th Python in Science Conference},
+  year={2010},
+  pages={51--56}
+}
+
+@article{pydantic,
+  title={Pydantic: Data Validation using Python Type Annotations},
+  author={Colvin, Samuel and contributors},
+  year={2023},
+  note={https://docs.pydantic.dev}
+}
